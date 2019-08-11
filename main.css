@@ -1,3 +1,5 @@
+/* General CSS for the entire page */
+
 body{
     margin: 0;
     background: #f1f3f5;
@@ -5,31 +7,12 @@ body{
 
 }
 
-.wrapper{
+#wrapper{
     background-image: initial;
     background: #f1f3f5;
     color: #111;
     font-family: BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
     margin: 0 20%;
-}
-
-#item2{
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 12px;
-    padding-left: 30px;
-}
-
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-    color: #111;
-    font-size: 50px;
-    line-height: 1.2;
-    margin: 0;
-    padding: 0;
-    font-weight: 200;
-    text-align: center;
-    margin-bottom: 16px;
 }
 
 h3{
@@ -53,9 +36,12 @@ a:link {
     text-decoration: none;
 }
 
+/* CSS for the Navigation Bar */
 .navList{
     list-style: none;
-    display: flex;
+    /*Used flex-box to align items in a row and 
+    align the items evenly across the page*/
+    display: flex; 
     flex-direction: row;
     justify-content: space-between;
 }
@@ -63,10 +49,6 @@ a:link {
 .navList a{
     padding: 10px;
     color: rgb(70, 70, 70);
-}
-
-.navList a:hover{
-    color: hotpink;
 }
 
 .navList a:nth-child(2){
@@ -81,13 +63,44 @@ a:link {
     border-radius: 50%; 
 }
 
-.sep{
+#item2{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 12px;
+    padding-left: 30px;
+}
+
+#item2:hover{
+    color: #745fb5;
+}
+
+/* CSS for items under the Nav Bar but before search Bar*/
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    color: #111;
+    font-size: 50px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#siteHeader{
+    margin-top: 80px;
+}
+
+/* CSS for Search Bar */
+
+#sep{
     color: rgba(102,119,136,.5);
     font-size: 17px;
     margin: 0 8px;
 }
 
-.prefix{
+#prefix{
     font-size: 13px;
     color: rgba(102,119,136,.5);
     padding: 2px 8px;
@@ -97,25 +110,20 @@ a:link {
     box-shadow: 0 1px 1px rgba(102,119,136,.25);
 }
 
-.siteHeader{
-    margin-top: 80px;
-}
-
 input{
     font-size: 17px;;
     padding: 16px;
     border: white;
     width: 70%;
 }
-.searchBox {
+#searchBox {
     box-shadow: 0 6px 8px rgba(102,119,136,.03), 0 1px 2px rgba(102,119,136,.3);
-    display: flex;
-    align-items: center; 
+    /*Used flex-box to align the search box items in a row*/
+    display: flex; 
     padding: 20px;
     margin-right: 2%;
     margin-left: 2%;
     height: 24px;
-    padding-left: 0;
     background: white;  
     font-family: 'Montserrat', sans-serif;  
 }
@@ -128,7 +136,8 @@ input{
     left: 40px;
 }
 
-.cf-wrapper{
+/* CSS for the Sponser info */
+#cf-wrapper{
     max-width: 330px;
     line-height: 1.4;
     font-family: Helvetica, Arial;
@@ -138,7 +147,7 @@ input{
     text-align: center;
 }
 
-.cf-powered-by{
+#cf-powered-by{
     box-shadow: none;
     margin-top:5px;
     font-size:11px;   
@@ -147,24 +156,29 @@ input{
     text-align: center;
 }
 
-.cf-header{
+#cf-header{
     font-size: 12px;
     color:#678;
     margin-bottom: 8px;
     margin-top: 20px;
 }
 
-.grid{
+/* CSS for grid of links below sponser info */
+#grid{
+    /* Used CSS grid*/
     display: grid;
+    /* Columns are setup to auto fill and not shrink below 156px */
     grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+    /* Added gaps between link boxes */
     grid-gap: 10px;
     margin-top: 30px;
 }
 
-.grid span{
+#grid span{
     color: #fff;
     text-align: left;
-    display: inline-flex;
+    /* Used flex-box to align items in center of box */
+    display: flex;
     align-items: center;
     width: 100%;
     height: 50px;
@@ -184,14 +198,14 @@ input{
 }
 
 .color1:hover{
-    background: #6651a5; 
+    background: #5f4aa1;
 }
 .color2{
     background: grey;
 }
 
 .color2:hover{
-    background: rgb(109, 107, 107);
+    background: #556371;
 }
 
 .color3{
@@ -199,21 +213,19 @@ input{
 }
 
 .color3:hover{
-    background: rgb(13, 156, 130);
+    background: #108b68;
 }
 
+/* CSS for columns of links towards bottom of page */
 .grid2{
+    /* CSS grid and added 2 columns */
     display: grid;
     grid-template-columns: 1fr 1fr;
-
 }
 
-.grid2 span{
-    margin: 5px;
-    font-family: BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
-   
+.grid2 a{
+    margin-top: 15px;
 }
-
 .hidden{
     color: #f1f3f5;
 }
